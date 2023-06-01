@@ -1,0 +1,56 @@
+
+
+     <h2 class="mb-4"> {{ 'languageSelect.manageUsers' | translate }}</h2>
+    
+    
+      <div class="container p-5 mx-auto">
+        <div class="text-end mb-3"> <a class="btn btn-success" [routerLink]="['/add-user']" > {{ 'languageSelect.addUser' | translate }}</a></div>    
+    <table class="table  table-striped">
+        <thead>
+          <tr>
+            <th scope="col">{{"userTable.id"| translate}}</th>
+            <th scope="col">{{"userTable.avatar"| translate}}</th>
+            <th scope="col">{{"userTable.firstName"| translate}}</th>
+            <th scope="col">{{"userTable.lastName"| translate}}</th>
+            <th scope="col">{{"userTable.email"| translate}}</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" >
+            <td>{{user.id}}</td>
+            <td><img src="{{user.avatar}}"  class="avatar" alt=""></td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+            <td>
+                <div ngbDropdown class="d-inline-block">
+                  <span class="dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>
+                    Action
+                </span>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                       <a ngbDropdownItem href="{{user.id}}"><i class="fas fa-pencil-alt"></i>&nbsp;Update</a>
+                        <a ngbDropdownItem  (click)="deleteUser(user.id)"><i class="fas fa-trash-alt"></i>&nbsp;Delete</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+          
+        </tbody>
+      </table>
+      <nav class="d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+                <a class="page-link" [href]="getPageLink(currentPage - 1)" (click)="goToPreviousPage($event)">{{"pagination.previous"| translate}}</a>
+              </li>
+              <li class="page-item" [class.active]="currentPage === pageNumber" *ngFor="let pageNumber of totalPagesArray">
+                <a class="page-link" [href]="getPageLink(pageNumber)" (click)="goToPage(pageNumber, $event)">{{ pageNumber }}</a>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <a class="page-link" [href]="getPageLink(currentPage + 1)" (click)="goToNextPage($event)">{{"pagination.next"| translate}}</a>
+              </li>
+        </ul>
+      </nav>
+  
+    </div>
+

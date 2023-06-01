@@ -1,0 +1,27 @@
+{
+    "languageSelect": {
+      "home": "Accueil",
+      "manageUsers": "Gérer les utilisateurs",
+      "addUser": "Ajouter Utilisateur"
+    },
+    "userTable": {
+      "id": "ID",
+      "avatar": "Avatar",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse e-mail",
+      "action": "Action"
+    },
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "submit": "Ajouter"
+    },
+    "hommeTitle": {
+      "title": "Bienvenue dans cette application de test"
+    },
+    "logoTitle": {
+      "logoTitle": "Formation Angular"
+    }
+  }
+  

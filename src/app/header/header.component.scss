@@ -1,0 +1,25 @@
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.flag-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.fa-chevron-down {
+  margin-left: auto;
+}

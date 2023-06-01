@@ -1,0 +1,27 @@
+{
+    "languageSelect": {
+      "home": "Home",
+      "manageUsers": "Manage Users",
+      "addUser": "Add User"
+    },
+    "userTable": {
+      "id": "ID",
+      "avatar": "Avatar",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "action": "Action"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "submit": "Submit"
+    },
+    "hommeTitle": {
+      "title": "Welcome to this test Application"
+    },
+    "logoTitle": {
+      "logoTitle": "Angular Training"
+    }
+
+  }
